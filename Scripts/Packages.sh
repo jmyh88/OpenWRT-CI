@@ -75,6 +75,25 @@ UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
 UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-app-wolplus"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
+# ========== 新增 lucky 插件 ==========
+UPDATE_PACKAGE "lucky" "sirpdboy/luci-app-lucky" "main"
+
+# 确保 package 目录存在
+mkdir -p package
+
+# 将 lucky 源码移动到 package/ 下（OpenWrt 编译必须）
+if [ -d "luci-app-lucky" ]; then
+    mv luci-app-lucky package/
+    echo "✅ Moved luci-app-lucky to package/"
+elif [ -d "lucky" ]; then
+    # 如果目录名为 lucky 则重命名后移动
+    mv lucky package/luci-app-lucky
+    echo "✅ Moved lucky to package/luci-app-lucky"
+else
+    echo "⚠️  Warning: lucky source directory not found!"
+fi
+# ===================================
+
 #更新软件包版本
 UPDATE_VERSION() {
 	local PKG_NAME=$1
@@ -115,7 +134,3 @@ UPDATE_VERSION() {
 		fi
 	done
 }
-
-#UPDATE_VERSION "软件包名" "测试版，true，可选，默认为否"
-UPDATE_VERSION "sing-box"
-#UPDATE_VERSION "tailscale"
