@@ -76,7 +76,7 @@ UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-ap
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
 # ========== 新增 lucky 插件 ==========
-UPDATE_PACKAGE "lucky" "sirpdboy/luci-app-lucky" "main"
+UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main"
 
 # 确保 package 目录存在
 mkdir -p package
