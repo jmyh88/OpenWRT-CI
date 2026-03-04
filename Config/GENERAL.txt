@@ -9,7 +9,8 @@ CONFIG_PACKAGE_luci-app-gecoosac=y
 CONFIG_PACKAGE_luci-app-passwall=n
 CONFIG_PACKAGE_luci-app-zerotier=y
 CONFIG_PACKAGE_luci-app-softethervpn=y
-CONFIG_PACKAGE_luci-app-ddns-go=y
+# CONFIG_PACKAGE_luci-app-ddns-go is not set
+CONFIG_PACKAGE_luci-app-lucky=y
 
 CONFIG_PACKAGE_luci-app-netspeedtest=n
 CONFIG_PACKAGE_luci-app-partexp=n
