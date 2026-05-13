@@ -4,6 +4,9 @@
 CONFIG_PACKAGE_luci-app-homeproxy=n
 CONFIG_PACKAGE_luci-app-openclash=n
 
+# 禁用高通 NSS 硬件加速组件以修复编译错误
+# CONFIG_PACKAGE_qca-nss-ecm is not set
+
 # 增加插件（保留gecoosac 及新增插件）
 CONFIG_PACKAGE_luci-app-gecoosac=y
 CONFIG_PACKAGE_luci-app-passwall=y
